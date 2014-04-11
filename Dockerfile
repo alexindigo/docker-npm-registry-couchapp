@@ -65,3 +65,7 @@ RUN /etc/init.d/couchdb start && \
     npm start && \
     npm run load && \
     echo "yes" | npm run copy
+
+EXPOSE 5984
+
+CMD ["/usr/local/bin/couchdb"]
