@@ -1,4 +1,4 @@
-# alexindigo/couchdb
+# alexindigo/npm-registry-couchapp
 FROM  alexindigo/couchdb
 MAINTAINER Alex Indigo <iam@alexindigo.com>
 
