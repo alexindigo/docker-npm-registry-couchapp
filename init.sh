@@ -23,8 +23,9 @@ npm config set npm-registry-couchapp:couch=${REGISTRY}
 
 # Load structure + timeless hack
 # and prevent overriding packages
+#curl -s -X PUT ${REGISTRY}/error%3A%20forbidden2 -d '{ "_id": "error: forbidden", "forbidden":"must supply latest _rev to update existing package" }' && \
+
 curl -s -X PUT ${REGISTRY} && \
-curl -s -X PUT ${REGISTRY}/error%3A%20forbidden2 -d '{ "_id": "error: forbidden", "forbidden":"must supply latest _rev to update existing package" }' && \
 npm start && \
 npm run load && \
 echo "yes" | npm run copy || \
